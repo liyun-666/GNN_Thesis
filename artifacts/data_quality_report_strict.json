@@ -1,0 +1,91 @@
+{
+  "before": {
+    "rows": 100000,
+    "missing": {
+      "u": 0,
+      "i": 0,
+      "b": 0,
+      "t": 0
+    },
+    "duplicate_ui_bt": 0,
+    "invalid_behavior": 0,
+    "non_positive_timestamp": 0,
+    "negative_user": 0,
+    "negative_item": 0,
+    "num_users": 983,
+    "num_items": 64467,
+    "behavior_dist": {
+      "0": 89709,
+      "1": 2744,
+      "2": 5446,
+      "3": 2101
+    },
+    "user_inter_quantiles": {
+      "0.1": 19.0,
+      "0.25": 37.5,
+      "0.5": 74.0,
+      "0.75": 136.0,
+      "0.9": 219.80000000000007,
+      "0.99": 447.25999999999965
+    },
+    "item_inter_quantiles": {
+      "0.1": 1.0,
+      "0.25": 1.0,
+      "0.5": 1.0,
+      "0.75": 2.0,
+      "0.9": 3.0,
+      "0.99": 7.0
+    },
+    "item_single_interaction_ratio": 0.7309941520467836
+  },
+  "after": {
+    "rows": 2422,
+    "missing": {
+      "u": 0,
+      "i": 0,
+      "b": 0,
+      "t": 0
+    },
+    "duplicate_ui_bt": 0,
+    "invalid_behavior": 0,
+    "non_positive_timestamp": 0,
+    "negative_user": 0,
+    "negative_item": 0,
+    "num_users": 105,
+    "num_items": 180,
+    "behavior_dist": {
+      "0": 2207,
+      "1": 37,
+      "2": 104,
+      "3": 74
+    },
+    "user_inter_quantiles": {
+      "0.1": 10.0,
+      "0.25": 11.0,
+      "0.5": 14.0,
+      "0.75": 25.0,
+      "0.9": 44.60000000000001,
+      "0.99": 110.67999999999995
+    },
+    "item_inter_quantiles": {
+      "0.1": 10.0,
+      "0.25": 10.0,
+      "0.5": 12.0,
+      "0.75": 14.0,
+      "0.9": 19.0,
+      "0.99": 35.630000000000024
+    },
+    "item_single_interaction_ratio": 0.0
+  },
+  "cleaning_params": {
+    "min_user_inter": 10,
+    "min_item_inter": 10
+  },
+  "recommendation": [
+    "Base data quality passed: no missing, duplicate, or invalid values.",
+    "Long-tail filtering is recommended: many items have only one interaction; try min_item_inter=2.",
+    "Behavior imbalance is severe: click dominates. Use behavior weighting or resampling in training."
+  ],
+  "input": "D:\\GNN_Thesis\\final_real_data.csv",
+  "clean_output": "D:\\GNN_Thesis\\final_real_data_clean_strict.csv"
+}

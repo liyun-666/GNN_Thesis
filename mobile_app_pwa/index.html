@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>ST-GNN Mobile Demo</title>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>ST-GNN Mobile Demo</h1>
+      <p>Realtime multi-behavior recommendation</p>
+    </header>
+
+    <section class="card">
+      <h2>API Config</h2>
+      <label>API Base URL</label>
+      <input id="apiBase" value="http://127.0.0.1:8000" />
+      <button id="healthBtn">Check API</button>
+      <p id="healthText"></p>
+    </section>
+
+    <section class="card grid">
+      <div>
+        <label>User ID</label>
+        <input id="userId" type="number" value="10009" />
+      </div>
+      <div>
+        <label>Top-K</label>
+        <input id="topK" type="number" value="10" />
+      </div>
+    </section>
+
+    <section class="card">
+      <label><input id="includeSeen" type="checkbox" /> Include Seen Items</label>
+      <button id="recommendBtn">Get Recommendations</button>
+      <table id="recTable">
+        <thead><tr><th>rank</th><th>item</th><th>score</th><th>reason</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="card grid">
+      <div>
+        <label>Item ID</label>
+        <input id="itemId" type="number" value="460466" />
+      </div>
+      <div>
+        <label>Behavior</label>
+        <select id="behavior">
+          <option value="0">Click</option>
+          <option value="1">Favorite</option>
+          <option value="2">Cart</option>
+          <option value="3" selected>Buy</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="card">
+      <button id="interactBtn">Submit Interaction</button>
+      <p id="interactText"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

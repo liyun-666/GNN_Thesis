@@ -1,0 +1,8 @@
+param,value,HR@10,NDCG@10,MRR@10,users
+embed_dim,32,0.0,0.0,0.0,80
+embed_dim,64,0.0,0.0,0.0,80
+embed_dim,96,0.0,0.0,0.0,80
+max_seq_len,10,0.0,0.0,0.0,80
+max_seq_len,20,0.0,0.0,0.0,80
+max_seq_len,30,0.0,0.0,0.0,80
+max_seq_len,50,0.0,0.0,0.0,80

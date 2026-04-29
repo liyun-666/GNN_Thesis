@@ -1,0 +1,5 @@
+setting,HR@10,NDCG@10,MRR@10,users
+w/o Spatial,0.0125,0.0036133103289735986,0.00125,80
+Full,0.0,0.0,0.0,80
+w/o Temporal,0.0,0.0,0.0,80
+w/o Behavior,0.0,0.0,0.0,80

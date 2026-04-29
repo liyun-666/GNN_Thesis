@@ -1,0 +1,19 @@
+{
+  "topk": 10,
+  "main_best": {
+    "model": "ItemCF",
+    "HR@10": 0.746268656716418,
+    "NDCG@10": 0.746268656716418,
+    "MRR@10": 0.746268656716418,
+    "users": 67
+  },
+  "ablation_best": {
+    "setting": "w/o Behavior",
+    "HR@10": 0.23880597014925373,
+    "NDCG@10": 0.21733740763649032,
+    "MRR@10": 0.21019900497512436,
+    "users": 67
+  },
+  "sensitivity_points": 0,
+  "num_eval_users": 67
+}

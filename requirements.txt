@@ -1,0 +1,12 @@
+pandas
+numpy
+torch
+scikit-learn
+matplotlib
+networkx
+streamlit
+fastapi
+uvicorn
+pydantic
+Pillow
+python-pptx

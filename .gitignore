@@ -1,0 +1,47 @@
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Build outputs and installers
+build/
+dist/
+installer_out/
+installer_payload/
+installers/
+*.exe
+*.spec
+
+# Runtime logs and temporary exports
+*.log
+node_migration.log
+scripts/
+artifacts/tunnel_logs/
+artifacts/inspector_exports/
+
+# Large or private datasets
+UserBehavior.csv
+*.sqlite
+app_accounts.db
+custom_*.db
+
+# Keep demo DB and lightweight model artifact available
+!rec_system.db
+!artifacts/stgnn_artifact_v2.pt
+
+# Large generated model/checkpoint files
+*.pth
+artifacts/stgnn_artifact.pt
+
+# Local thesis/build outputs that are not needed to run the app
+thesis_output/
+*.tmp
+~$*

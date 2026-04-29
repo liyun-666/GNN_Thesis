@@ -1,0 +1,407 @@
+{
+  "root": "D:\\GNN_Thesis",
+  "summary": {
+    "files_scanned": 79,
+    "python_files": 14,
+    "json_files": 7,
+    "db_files": 3,
+    "csv_files": 8,
+    "script_files": 15,
+    "binary_files": 9,
+    "failure_count": 4
+  },
+  "checks": {
+    "python_compile": [
+      {
+        "file": "D:\\GNN_Thesis\\api_server.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\app.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\data_quality.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\db_manager.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\desktop_app.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\desktop_app_v2.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\experiment_suite.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\extract_data.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\launch_hidden.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\launch_public_tunnel.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\qa_tool.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\recommender_engine.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\st_gnn_model.py",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\train_stgnn.py",
+        "ok": true
+      }
+    ],
+    "json_parse": [
+      {
+        "file": "D:\\GNN_Thesis\\paper_alignment.json",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\data_quality_report.json",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\data_quality_report_strict.json",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\experiments\\summary.json",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\inspector_exports\\batch_diag_20260414_112119_summary.json",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_payload\\paper_alignment.json",
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\mobile_app_pwa\\manifest.json",
+        "ok": true
+      }
+    ],
+    "db_integrity": [
+      {
+        "file": "D:\\GNN_Thesis\\app_accounts.db",
+        "ok": true,
+        "integrity": "ok",
+        "tables": [
+          "users",
+          "sqlite_sequence"
+        ]
+      },
+      {
+        "file": "D:\\GNN_Thesis\\rec_system.db",
+        "ok": true,
+        "integrity": "ok",
+        "tables": [
+          "user_behavior_logs"
+        ]
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_payload\\rec_system.db",
+        "ok": true,
+        "integrity": "ok",
+        "tables": [
+          "user_behavior_logs"
+        ]
+      }
+    ],
+    "csv_read": [
+      {
+        "file": "D:\\GNN_Thesis\\final_real_data.csv",
+        "size_mb": 2.83,
+        "ok": true,
+        "header": [
+          "u",
+          "i",
+          "b",
+          "t"
+        ],
+        "sample_rows": 5
+      },
+      {
+        "file": "D:\\GNN_Thesis\\final_real_data_clean.csv",
+        "size_mb": 1.49,
+        "ok": true,
+        "header": [
+          "u",
+          "i",
+          "b",
+          "t"
+        ],
+        "sample_rows": 5
+      },
+      {
+        "file": "D:\\GNN_Thesis\\final_real_data_clean_strict.csv",
+        "size_mb": 0.07,
+        "ok": true,
+        "header": [
+          "u",
+          "i",
+          "b",
+          "t"
+        ],
+        "sample_rows": 5
+      },
+      {
+        "file": "D:\\GNN_Thesis\\UserBehavior.csv",
+        "size_mb": 3502.22,
+        "ok": true,
+        "header": [
+          "1",
+          "2268318",
+          "2520377",
+          "pv",
+          "1511544070"
+        ],
+        "sample_rows": 5
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\experiments\\ablation.csv",
+        "size_mb": 0.0,
+        "ok": true,
+        "header": [
+          "setting",
+          "HR@10",
+          "NDCG@10",
+          "MRR@10",
+          "users"
+        ],
+        "sample_rows": 4
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\experiments\\benchmark_main.csv",
+        "size_mb": 0.0,
+        "ok": true,
+        "header": [
+          "model",
+          "HR@10",
+          "NDCG@10",
+          "MRR@10",
+          "users"
+        ],
+        "sample_rows": 5
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\experiments\\sensitivity.csv",
+        "size_mb": 0.0,
+        "ok": true,
+        "header": [
+          "param",
+          "value",
+          "HR@10",
+          "NDCG@10",
+          "MRR@10",
+          "users"
+        ],
+        "sample_rows": 5
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\inspector_exports\\batch_diag_20260414_112119.csv",
+        "size_mb": 0.0,
+        "ok": true,
+        "header": [
+          "ok",
+          "user_id",
+          "item_id",
+          "behavior",
+          "before_score",
+          "after_score",
+          "score_delta",
+          "before_rank_unfiltered",
+          "after_rank_unfiltered",
+          "rank_improve",
+          "topk_before_unfiltered",
+          "topk_after_unfiltered",
+          "topk_before_filtered",
+          "topk_after_filtered",
+          "quality_score",
+          "message"
+        ],
+        "sample_rows": 5
+      }
+    ],
+    "script_refs": [
+      {
+        "file": "D:\\GNN_Thesis\\deploy_public.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\show_public_urls.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_all_app.bat",
+        "missing_refs": [
+          "D:\\GNN_Thesis\\mobile_app_pwa && python -m http.server 5173"
+        ],
+        "ok": false
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_all_hidden.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_all_quiet.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_all_silent.vbs",
+        "missing_refs": [
+          "D:\\GNN_Thesis && python -m uvicorn api_server:app --host 127.0.0.1 --port 8000 --app-dir D:\\GNN_Thesis",
+          "D:\\GNN_Thesis\\mobile_app_pwa && python -m http.server 5173"
+        ],
+        "ok": false
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_api.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_desktop_app.bat",
+        "missing_refs": [
+          "D:\\GNN_Thesis\\.venv\\Scripts\\pythonw.exe",
+          "D:\\GNN_Thesis\\.venv\\Scripts\\pythonw.exe"
+        ],
+        "ok": false
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_desktop_app_debug.bat",
+        "missing_refs": [
+          "D:\\GNN_Thesis\\.venv\\Scripts\\python.exe",
+          "D:\\GNN_Thesis\\.venv\\Scripts\\python.exe"
+        ],
+        "ok": false
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_desktop_app_silent.vbs",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_free_public.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_mobile_app.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\start_streamlit_app.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\stop_all_app.bat",
+        "missing_refs": [],
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\stop_all_silent.vbs",
+        "missing_refs": [],
+        "ok": true
+      }
+    ],
+    "binary_sanity": [
+      {
+        "file": "D:\\GNN_Thesis\\st_gnn_heavy_model.pth",
+        "size_mb": 65.43,
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\stgnn_artifact.pt",
+        "size_mb": 24.81,
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\artifacts\\stgnn_artifact_v2.pt",
+        "size_mb": 0.31,
+        "ok": true
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_out\\STGNN_Desktop_Setup_v1.exe",
+        "size_mb": 2208.53,
+        "ok": true,
+        "magic": "4d5a"
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_out\\STGNN_Desktop_Setup_v2_EN.exe",
+        "size_mb": 2208.53,
+        "ok": true,
+        "magic": "4d5a"
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_out\\STGNN_Desktop_Setup_v3_ONEDIR.exe",
+        "size_mb": 1690.56,
+        "ok": true,
+        "magic": "4d5a"
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_out\\STGNN_Desktop_Setup_v3_ONEDIR_B.exe",
+        "size_mb": 1690.56,
+        "ok": true,
+        "magic": "4d5a"
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_payload\\STGNN_Desktop.exe",
+        "size_mb": 2890.97,
+        "ok": true,
+        "magic": "4d5a"
+      },
+      {
+        "file": "D:\\GNN_Thesis\\installer_payload\\artifacts\\stgnn_artifact_v2.pt",
+        "size_mb": 0.31,
+        "ok": true
+      }
+    ]
+  },
+  "failures": [
+    {
+      "type": "script_refs",
+      "file": "D:\\GNN_Thesis\\start_all_app.bat",
+      "error": "missing refs: ['D:\\\\GNN_Thesis\\\\mobile_app_pwa && python -m http.server 5173']"
+    },
+    {
+      "type": "script_refs",
+      "file": "D:\\GNN_Thesis\\start_all_silent.vbs",
+      "error": "missing refs: ['D:\\\\GNN_Thesis && python -m uvicorn api_server:app --host 127.0.0.1 --port 8000 --app-dir D:\\\\GNN_Thesis', 'D:\\\\GNN_Thesis\\\\mobile_app_pwa && python -m http.server 5173']"
+    },
+    {
+      "type": "script_refs",
+      "file": "D:\\GNN_Thesis\\start_desktop_app.bat",
+      "error": "missing refs: ['D:\\\\GNN_Thesis\\\\.venv\\\\Scripts\\\\pythonw.exe', 'D:\\\\GNN_Thesis\\\\.venv\\\\Scripts\\\\pythonw.exe']"
+    },
+    {
+      "type": "script_refs",
+      "file": "D:\\GNN_Thesis\\start_desktop_app_debug.bat",
+      "error": "missing refs: ['D:\\\\GNN_Thesis\\\\.venv\\\\Scripts\\\\python.exe', 'D:\\\\GNN_Thesis\\\\.venv\\\\Scripts\\\\python.exe']"
+    }
+  ]
+}
