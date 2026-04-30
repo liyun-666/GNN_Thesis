@@ -10,7 +10,7 @@ Double-click:
 
 Desktop app features:
 - Account register/login
-- Demo workspace (built-in thesis dataset + model)
+- Demo workspace (built-in sample dataset + model)
 - Custom DB workspace (user loads sqlite DB/table)
 - Format validator (`u,i,b,t` required)
 - History eviction policy per user (keep latest N, hard cap 2000)
@@ -74,18 +74,18 @@ npx cap open android
 ```
 Build APK in Android Studio.
 
-## 5) Data/Inspector outputs for thesis
+## 5) Data/Inspector outputs
 Inspector export files are saved to:
 - `artifacts/inspector_exports/*.csv`
 - `artifacts/inspector_exports/*_summary.json`
 - `artifacts/inspector_exports/*.png`
 
-Use these directly in thesis tables and figures.
+Use these for project inspection and reporting.
 
 ## Build installer (desktop)
 1. Build exe:
 ```bash
-python -m PyInstaller --noconfirm --clean --noconsole --onefile --name STGNN_Desktop --add-data "artifacts;artifacts" --add-data "paper_alignment.json;." --add-data "PAPER_PDF_LINKS.md;." --add-data "rec_system.db;." desktop_app_v2.py
+python -m PyInstaller --noconfirm --clean --noconsole --onefile --name STGNN_Desktop --add-data "artifacts;artifacts" --add-data "rec_system.db;." desktop_app_v2.py
 ```
 2. Copy exe to installer payload:
 ```bash

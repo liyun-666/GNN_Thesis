@@ -41,7 +41,6 @@ custom_*.db
 *.pth
 artifacts/stgnn_artifact.pt
 
-# Local thesis/build outputs that are not needed to run the app
-thesis_output/
+# Local temporary files
 *.tmp
 ~$*

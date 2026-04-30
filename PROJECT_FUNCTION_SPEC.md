@@ -1,69 +1,37 @@
-﻿# 项目功能与实现细节说明（可直接用于论文/答辩）
+# Project Function Specification
 
-## 1. 项目目标
-本项目实现了一个基于时空图神经网络（ST-GNN）的多行为序列商品推荐系统，支持：
-- 离线训练与评测（可复现实验链条）
-- 在线交互后增量更新推荐（点击/收藏/加购/购买）
-- 桌面端可视化演示（注册登录、推荐、诊断、可视化）
+This project implements an ST-GNN based multi-behavior recommendation system. It supports offline training, recommendation inference, interactive behavior updates, desktop visualization, custom database loading, and diagnostic exports.
 
-## 2. 当前落地模块
+## Core Modules
 
-### 2.1 推荐核心模型
-- 文件：`recommender_engine.py`
-- 核心结构：
-  - 空间分支：用户-商品图 + 商品转移图的信息传播
-  - 时间分支：行为序列 GRU + 时间间隔编码
-  - 行为语义：行为 embedding 与权重建模（click/favorite/cart/buy）
-- 训练目标：BPR 排序损失
-- 推理输出：Top-K 推荐列表，含得分与原因字段
+- `recommender_engine.py`: recommendation pipeline, data preparation, training, artifact loading, and Top-K inference.
+- `st_gnn_model.py`: ST-GNN model structure.
+- `desktop_app_v2.py`: desktop application with login, demo workspace, custom database workspace, recommendation view, diagnostics, and user visualization.
+- `api_server.py`: FastAPI backend for recommendation and behavior submission.
+- `mobile_app_pwa/`: mobile-style web frontend served by the API.
+- `qa_tool.py`: batch diagnostics and recommendation inspection utilities.
+- `data_quality.py`: data validation and cleaning tools.
+- `experiment_suite.py`: experiment runner and metric comparison utilities.
 
-### 2.2 在线更新机制
-- 文件：`desktop_app_v2.py`, `recommender_engine.py`
-- 支持用户在 App 内提交交互后实时更新推荐。
-- 采用“历史保留上限 + 淘汰算法”：每个用户仅保留最近 N 条（默认 300，硬上限 2000）。
-- 交互写库后同步更新内存状态，避免“写入成功但诊断没更新”的一致性问题。
+## Data Format
 
-### 2.3 Inspector 自动检验工具
-- 文件：`qa_tool.py`, `desktop_app_v2.py`
-- 能力：
-  - 批量抽样检查推荐更新正确性
-  - 专项商品诊断（如 460466）
-  - 自动导出论文可用结果（CSV/PNG/JSON）
-- 指标：pass_rate、avg_quality_score、rank_improve、score_delta。
+Custom SQLite or CSV data should contain:
 
-### 2.4 双工作区 App（论文演示关键）
-- 文件：`desktop_app_v2.py`
-- `Demo Workspace`：使用内置论文数据/模型一键演示。
-- `Custom DB Workspace`：用户加载自己的 SQLite 数据库并训练。
-- 数据格式要求：表必须包含 `u,i,b,t`，`b∈{0,1,2,3}`，`t` 为 Unix 时间戳。
-- 已加入输入边界保护（Top-K、Inspector sample、epoch）与索引优化。
+- `u`: user ID
+- `i`: item ID
+- `b`: behavior type, where `0=click`, `1=favorite`, `2=cart`, `3=buy`
+- `t`: Unix timestamp
 
-### 2.5 用户行为可视化
-- 文件：`desktop_app_v2.py`
-- 新增 `User Visualization` 页面：按用户展示商品粒度统计
-  - 总次数 total
-  - click/favorite/cart/buy 次数
-  - 最近交互时间
+## Highlights
 
-### 2.6 数据与实验流水线
-- 数据清洗：`data_quality.py`
-- 训练脚本：`train_stgnn.py`
-- 前沿基线对照/消融/敏感性：`experiment_suite.py`
-- 论文对齐映射：`paper_alignment.json`, `PAPER_LANDING_MAP.md`
+- Combines graph-based and sequence-based recommendation features.
+- Supports both built-in demo data and user-provided databases.
+- Updates recommendations after new user interactions.
+- Provides diagnostic exports for checking recommendation quality.
+- Includes desktop, API, and mobile-style web demo entry points.
 
-## 3. 与论文对齐情况（已落地）
-已对齐并工程化落地的参考方向：
-- MBA (2025): 多行为序列图推荐
-- STC-HGAT (2024): 时空异构联合建模
-- BiGCAN (2025): 动态兴趣与时间感知融合
-- MUSE (lite): 长序列建模思路
+## Known Limits
 
-## 4. 当前系统亮点（答辩可讲）
-- 从“模型提出→代码实现→实验验证→可视化演示→安装分发”完整闭环。
-- 同时支持“固定演示数据”和“用户自带数据库”两种模式。
-- 具备自动检验与导出能力，适合本科论文工作量呈现。
-
-## 5. 已知边界
-- 当前注册登录为本地单机账号（不含云端多设备同步）。
-- 自定义数据库默认结构较轻，建议按数据规模继续做分表与缓存。
-- 大模型体积导致安装包较大，可继续做依赖裁剪。
+- Account data is local-only.
+- Large datasets and build artifacts are excluded from the Git repository.
+- Custom databases should follow the expected field format for best compatibility.
