@@ -73,6 +73,22 @@ Then open:
 http://127.0.0.1:8000/web/index.html
 ```
 
+## Screenshots
+
+### System Overview
+
+![System Overview](./系统总览1.png)
+
+### Recommendation Refresh
+
+![Before Refresh](./推荐刷新-前.png)
+
+![After Refresh](./推荐刷新-后.png)
+
+### User Behavior Visualization
+
+![User Behavior Visualization](./用户购买记录可视化.png)
+
 ## Data Format
 
 The system expects behavior data from SQLite or CSV with these fields:

@@ -23,7 +23,11 @@ installers/
 # Runtime logs and temporary exports
 *.log
 node_migration.log
+hexo_setup.log
 scripts/
+.npm-cache/
+.npm-global/
+hexo_blog/
 artifacts/tunnel_logs/
 artifacts/inspector_exports/
 
